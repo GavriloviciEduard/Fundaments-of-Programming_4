@@ -8,6 +8,9 @@ def init(n):
 
 def satisf(W,V,k,cond):
     
+    if V[k-1]>V[k]:
+        return 0
+    
     for i in range(0,k):
         if cond(W[V[i]],W[V[k]]):
             return  0
